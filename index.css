@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {box-sizing:border-box}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: rgb(232, 218, 244);
+    background: linear-gradient(to right, #434343 0%, rgb(134, 127, 141) 100%);
+    font-family: 'Open Sans', cursive;
+    overflow-x: hidden;
+    color: aliceblue;
+}
+
+.top-container{
+    display: flex;
+    justify-content: center;
+    gap:1.5rem;
+    padding:1rem
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.navigation{
+    display: flex;
+}
+.navbar{
+    flex:4;
+    z-index: 99;
+    background-color: b;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li:hover{
+    cursor: pointer;
+    color: azure;
+}
+.caret{
+    margin-left: 5px;
+}
+.dropdown{
+    position: absolute;
+    background-color: rgb(232, 218, 244);
+    background: linear-gradient(to right, #434343 0%, rgb(134, 127, 141) 100%);
+    left: 0%;
+    top: 100%;
+    width: 230px;
+    display: none; 
+    font-size: .8rem;
+}
+.dropdown ul{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding-left: 0;
+}
+.dropdown ul li{
+    margin-bottom: 3px;
+    transition: 0.3s ease-in-out;  
+}
+.navbar ul li:hover .dropdown{
+    display: block;
+}
+.dropdown ul li:hover{
+    color: #01b0f8; 
+    font-size: 1.2em;
+    
+}
+.searchbar{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.searchbar input{
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    height: 65%;
+    width: 75%;
+    padding-left:10px;
+}
+.search-btn{
+    background: transparent;
+    border: none;
+    color: rgb(33, 190, 190);
+    position: absolute;
+    right: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+/* scroll bar */
+.scroll-bar{
+    background: black;
+    height:3rem;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap:2rem;
+    white-space: nowrap;
+    
+}
+.scroll-bar p {
+    margin: 0;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.news-img{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+}
+.news-img img{
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    right: -40px;
+    top:10px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+h1 {
+    
+    margin: 0%;
+  }
+  a {
+    display: block;
+    /* width: 10px; */
+    color: black;
+  }
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+height: 500px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+
+}
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+/* testimonial slider */
+#testimonials{
+padding: 3rem 2rem 5rem;
+
+}
+
+#testimonials h2{
+text-align: center;
+color: #01b0f8;
+font-size: 3rem;
+font-weight: 500;
+}
+#testimonials p{
+text-align: center;
+margin-top: -2rem;
+padding-bottom: 2rem;
+
+}
+
+.swiper {
+width: 100%;
+height: 100%;
+margin-top: 3rem;
+
+}
+.swiper-wrapper{
+    display: flex;
+    width: 60vw;
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+height: 15rem;
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.card {
+background: #dfdede;
+box-shadow: 0 8px 30px -7px #c9dff0;
+margin: 0 20px;
+padding: 0 10px;
+border-radius: 20px;
+border: 0;
+width: 200px;
+height: 200px;
+padding-top: 5px;
+
+
+h5 {
+color: #01b0f8;
+font-size: 21px;
+line-height: 1.3;
+
+span {
+font-size: 18px;
+color: #666666;
+}
+}
+
+p {
+font-size: 18px;
+color: #555;
+padding-bottom: 15px;
+}
+}
+
+.active {
+opacity: 0.5;
+transition: all 0.3s;
+}
+
+.center {
+opacity: 1;
+
+h5 {
+font-size: 24px;
+
+span {
+font-size: 20px;
+}
+}
+
+.card-img-top {
+max-width: 100%;
+height: 120px;
+width: 120px;
+}
+}
+.card-img-top {
+max-width: 100px;
+max-height: 100px;
+border-radius: 50%;
+margin: 0px auto 0;
+box-shadow: 0 8px 20px -4px #95abbb;
+width: 100px;
+height: 100px;
+object-fit: cover;
+}
+.swiper-pagination{
+position: relative !important;
+}
+
+@media (max-width: 767px) {
+.gtco-testimonials {
+margin-top: 20px;
+}
+}
+
+.footer-links a{
+    width: 80px;
+}
+
+.news-pic{
+    width: 20px;
+    height:20px;
+
+}
+.news-pic img{
+    width: 100%;
+    height: 100%;
+}
+
+.resource{
+    display: flex;
+    gap:2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+   
+}
+.report{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+}
+.report img{
+    flex: 2;
+    height: 80%;
+    width: 100%;
+}
+.operation{
+   
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+.operation img{
+    width: 100%;
+    flex: 2;
+
+}
+.table {
+    width: 400px;
+    height: 500px;
+    border: 2px solid #4b4848;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* table-layout: fixed; */
+}
+
+th, td {
+    /* border: 1px solid black; */
+    padding: 8px;
+    text-align: center;
+    background-color: transparent;
+}
+
+th {
+    background-color: transparent;
+}
+.table-img{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+.table-img img{
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+}
